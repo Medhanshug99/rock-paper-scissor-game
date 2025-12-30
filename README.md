@@ -25,3 +25,5 @@ An interactive **Rock–Paper–Scissors game** built using
 5. Scores update automatically.
 6. Click **Reset Game** to start over.
 
+## 🌐 Live Preview
+[Click here to play the game online]  (https://rock-paper-scissor-game-27.vercel.app/)

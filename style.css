@@ -1,157 +1,107 @@
 *,
-*:before,
-*:after{
-    padding: 0;
+*::before,
+*::after {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     height: 100vh;
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.container{
+.container {
     width: 45%;
     min-width: 500px;
-    background-color: #1e1e2f;
-    padding: 40px 30px;
-    position: absolute;
-    transform: translate(-50%,-50%);
-    top: 50%;
-    left: 50%;
-    border-radius: 10px;
-    box-shadow: 0 15px 25px rgba(0,0,0,0.4);
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
     text-align: center;
 }
 
-.scores{
-    margin-bottom: 30px;
+.scores {
     text-align: right;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #333;
 }
 
-.weapons{
-    width: 90%;
-    margin: auto;
+.weapons {
     display: flex;
     justify-content: space-around;
+    margin: 20px 0;
 }
 
-.weapons button{
-    background-color: #00e5ff;
-    color: #000;
-    border: none;
-    font-size: 50px;
-    height: 100px;
-    width: 100px;
+.weapons button {
+    height: 90px;
+    width: 90px;
+    font-size: 40px;
+    background-color: #e6e6e6;
+    border: 1px solid #aaa;
     border-radius: 50%;
-    outline: none;
     cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.weapons button:hover{
-    transform: scale(1.1);
-    box-shadow: 0 0 20px rgba(0,229,255,0.8);
+.weapons button:hover {
+    background-color: #d9d9d9;
 }
 
-.details{
-    margin-top: 30px;
+.details {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #333;
 }
 
-.scores,
-.details{
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    font-size: 15px;
-    color: #ffffff;
-}
-
-#result{
-    width: 180px;
-    padding: 10px 0;
-    margin: 30px auto;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    background-color: #00e5ff;
-    color: #000;
-    border-radius: 5px;
+#result {
+    width: 160px;
+    margin: 20px auto;
+    padding: 8px 0;
+    border: 1px solid #007bff;
+    color: #007bff;
+    font-weight: bold;
 }
 
 #user_choice,
-#comp_choice{
-    font-weight: 400;
-    margin-bottom: 10px;
-    color: #e0e0e0;
+#comp_choice {
+    margin-bottom: 8px;
 }
 
-span{
-    font-weight: 600;
-    color: #00e5ff;
+span {
+    font-weight: bold;
 }
 
-#reset_btn{
-    display: block;
-    margin: 15px auto 0;
-    padding: 10px 20px;
-    background-color: #00e5ff;
-    color: #000;
+#start_btn,
+#reset_btn {
+    margin-top: 12px;
+    padding: 8px 18px;
+    background-color: #007bff;
+    color: #fff;
     border: none;
-    border-radius: 20px;
+    border-radius: 4px;
     cursor: pointer;
-    font-weight: 600;
-    transition: 0.3s;
+    font-size: 14px;
 }
 
-#reset_btn:hover{
-    background-color: #00bcd4;
+#start_btn:hover,
+#reset_btn:hover {
+    background-color: #0056b3;
 }
 
-#start_btn{
-    display: block;
-    margin: 20px auto;
-    padding: 12px 25px;
-    background-color: #00e5ff;
-    color: #000;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 16px;
-    transition: 0.3s;
-}
-
-#start_btn:hover{
-    background-color: #00bcd4;
-}
-
-@keyframes winGlow {
-    0% { box-shadow: 0 0 5px #00c853; }
-    50% { box-shadow: 0 0 20px #00c853; }
-    100% { box-shadow: 0 0 5px #00c853; }
-}
-
-@keyframes loseGlow {
-    0% { box-shadow: 0 0 5px #d50000; }
-    50% { box-shadow: 0 0 20px #d50000; }
-    100% { box-shadow: 0 0 5px #d50000; }
-}
-
-.win { animation: winGlow 0.6s ease-in-out; }
-.lose { animation: loseGlow 0.6s ease-in-out; }
-
-@media (max-width: 600px){
-    .container{
+@media (max-width: 600px) {
+    .container {
         width: 90%;
         min-width: unset;
-        padding: 25px 20px;
     }
-    .weapons button{
-        height: 80px;
-        width: 80px;
-        font-size: 36px;
-    }
-    .scores{
-        font-size: 14px;
+
+    .weapons button {
+        height: 70px;
+        width: 70px;
+        font-size: 32px;
     }
 }
